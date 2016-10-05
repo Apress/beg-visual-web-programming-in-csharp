@@ -1,0 +1,25 @@
+1 - Download and install MSDE following instructions from http://www.asp.net/msde/default.aspx. On the last step, you should use SecurityMode=Mixed instead of the suggested SQL mode.
+2 - Ensure the MSDE service is started. Easiest way is to Run: net start mssqlserver
+3 - Open a command prompt and issue the following command to attach the database
+
+	C:\osql -S (local) -E -Q "sp_attach_db N'FriendsData', N'C:\Friends_Data.mdf', N'C:\Friends_Log.ldf'"
+
+    Specify the appropriate full path of both the log and the data files you downloaded.
+
+To detach the database, use the following command:
+	
+	C:\osql -S (local) -E -Q "sp_detach_db N'FriendsData'"
+
+(You must make sure the DB is not in use before you do this.  Easiest way is to stop and restart the MSDE service.)
+
+The string "(local)" applies if your MSDE installation does not include an instance name. You can check this using the Services administrative tool, and locating the service starting with MSSQLSERVER. If you see a "$" character after that, the name that follows is the SQL instance name. In this case, you should append that to the "(local)" string above, separated by a backwards slash (i.e. (local)\NetSDK if the service is called MSSQLSERVER$NetSDK).
+
+4 - In the same command prompt, issue the following command to create the apress user:
+
+c:\osql -S (local) -E -Q "sp_addlogin @loginame='apress', @passwd='apress', @defdb='FriendsData'"
+
+5 - Next, we need to make that user the owner of the FriendsData database:
+
+c:\osql -S (local) -E -d "FriendsData" -Q "sp_adduser 'apress', 'apress', 'db_owner'"
+
+If you get a message saying the transaction can't be started because the database is read only, make sure the account the SQL Server service is running has full control over the .mdf and .ldf files. If you modify the permissions, you need to restart SQL Server service, detach the database and start again from step 3. Note that at this point, the user login (step 4) may already be created on the SQL Server.

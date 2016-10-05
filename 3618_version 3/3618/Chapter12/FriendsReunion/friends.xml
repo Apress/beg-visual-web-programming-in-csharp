@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Friends xmlns="http://www.apress.com/schemas/friendsreunion"
+				 PlaceID="C9796AD1-5A7E-4d9c-9F99-0090E11E5662">
+  <User ID="E81A8BCD-47A3-4038-9F7B-2DF25C741833">
+    <Login>gmorande</Login>
+    <Password>gusygaby</Password>
+    <FirstName>Gustavo</FirstName>
+    <LastName>Morande</LastName>
+    <PhoneNumber>042-700-7007</PhoneNumber>
+    <Address>2755 3rd. February Street, Buenos Aires</Address>
+    <Email>gmorande@clariusconsulting.com</Email>
+    <Attended Name="High School Complete">
+      <YearIn>1972</YearIn>
+      <MonthIn>3</MonthIn>
+      <YearOut>1977</YearOut>
+      <MonthOut>11</MonthOut>
+      <Notes>I played cymbals in the school band!</Notes>
+    </Attended>
+  </User>
+</Friends>

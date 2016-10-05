@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendsReunion", "http://localhost/FriendsReunion/FriendsReunion.csproj", "{58018674-3FE6-4536-A390-A8708030A635}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FriendsReunionSetup", "FriendsReunionSetup.vdproj", "{622CAD29-94D1-42B6-A1BB-61AE6C299A66}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendsReunionInstaller", "..\FriendsReunionInstaller\FriendsReunionInstaller.csproj", "{629F15F6-0482-4CAF-B108-7F98F791D4AB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{58018674-3FE6-4536-A390-A8708030A635}.Debug.ActiveCfg = Debug|.NET
+		{58018674-3FE6-4536-A390-A8708030A635}.Debug.Build.0 = Debug|.NET
+		{58018674-3FE6-4536-A390-A8708030A635}.Release.ActiveCfg = Release|.NET
+		{58018674-3FE6-4536-A390-A8708030A635}.Release.Build.0 = Release|.NET
+		{622CAD29-94D1-42B6-A1BB-61AE6C299A66}.Debug.ActiveCfg = Debug
+		{622CAD29-94D1-42B6-A1BB-61AE6C299A66}.Release.ActiveCfg = Release
+		{629F15F6-0482-4CAF-B108-7F98F791D4AB}.Debug.ActiveCfg = Debug|.NET
+		{629F15F6-0482-4CAF-B108-7F98F791D4AB}.Debug.Build.0 = Debug|.NET
+		{629F15F6-0482-4CAF-B108-7F98F791D4AB}.Release.ActiveCfg = Release|.NET
+		{629F15F6-0482-4CAF-B108-7F98F791D4AB}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
